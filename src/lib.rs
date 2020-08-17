@@ -1,3 +1,4 @@
+use std::error::Error;
 
 pub enum Action {
     Add,
@@ -35,11 +36,20 @@ impl Config {
     }
 }
 
+pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
+    //here we must do the mongo client and pass it to action function
+    config.action.process("mongoClient", &config.message);
+    Ok(())
+}
+
 impl Action {
     pub fn details(&self) {
         match self {
             Action::Add => println!("Adding action"),
             Action::Delete => println!("Deleting action"),
         }
+    }
+    fn process(&self,a: &str,b: &str) {
+        println!("Running!")
     }
 }

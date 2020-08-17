@@ -9,4 +9,8 @@ fn main() {
         process::exit(1);
     });
     config.action.details();
+    if let Err(e) = todo::run(config) {
+        eprintln!("Application error: {}", e);
+        process::exit(1);
+    }
 }
