@@ -1,6 +1,6 @@
 # WIP: TODO App
 
-The main idea is to added in your bash profile in order to keep track of all your pending tasks, as everybody knows, the terminal always goes first ;)
+The main idea is to add it in your bash profile in order to keep track of all your pending tasks because, as everybody knows, the terminal always goes first.
 
 
 ## Usage
